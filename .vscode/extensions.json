@@ -4,5 +4,6 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "dotenv.dotenv-vscode",
+    "pilotkid.lodash-import-what-you-need"
   ]
 }

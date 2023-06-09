@@ -3,8 +3,6 @@
     "**/.yarn": true,
     "**/.pnp.*": true
   },
-  "eslint.nodePath": ".yarn/sdks",
-  "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -14,25 +12,32 @@
   ],
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll": true
+  },
+  "saveAndRunExt": {
+    "commands": [
+      {
+        "match": "**/*.(js|jsx|ts|tsx)",
+        "isShellCommand": false,
+        "command": "lodash-import-what-you-need.lodash-treeshake"
+      }
+    ] 
   },
   "eslint.packageManager": "yarn",
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -45,4 +50,6 @@
   "editor.tokenColorCustomizations": {
     "textMateRules": [] // FIX FOR DOTENV AUTOCLOAKING
   },
+  "editor.tabSize": 2,
+  "eslint.debug": true
 }
